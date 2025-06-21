@@ -28,7 +28,6 @@ Este repositório é **livre para ser clonado, modificado e personalizado** com 
 ## 🚀 Tecnologias
 
 - [React](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
 - [Vite](https://vitejs.dev)
 - E um montão de carinho
 
