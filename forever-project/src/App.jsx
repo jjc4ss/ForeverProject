@@ -10,7 +10,7 @@ import euiela1 from './assets/euiela1.jpg'
 import euiela2 from './assets/euiela2.jpg'
 import euiela3 from './assets/euiela3.jpg'
 import matheuskauan from './assets/matheuskauan.mp3'
-
+import albumcapa from './assets/matheus-kauan.webp'
 
 const startDate = new Date("2025-03-05T00:00:00");
 
@@ -154,7 +154,7 @@ export default function App() {
                 loop
               />
             <div className="spotify-container-title">
-              <img id="album-photo" width={90} src="https://www.mgtradio.net/_next/image?url=https%3A%2F%2Fapi.mgtradio.net%2Ffiles%2Fimages%2Fartists%2Fmaster%2Fmatheus-kauan.jpg&w=384&q=75"/>
+              <img id="album-photo" width={90} src={albumcapa}/>
               <div className="spotify-mid">
                 <div className="spotify-titles">
                   <h3>Te assumi pro Brasil</h3>
