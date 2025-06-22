@@ -1,0 +1,320 @@
+/* Reset e corpo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo galáxia escuro */
+body {
+  background: radial-gradient(ellipse at center, #1a002d, #0a001a 80%);
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f3d9f5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+html{
+  background: radial-gradient(ellipse at center, #1a002d, #0a001a 80%);
+  width: 100%;
+  height: 100%;
+}
+
+#root{
+  background: radial-gradient(ellipse at center, #1a002d, #0a001a 80%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid #ffffff;
+  margin: 20px 0;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.popup-content {
+  background: #330033;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #aa00aa;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f9c6ff;
+}
+
+.enter-button {
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #aa00aa;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+  background: #d600d6;
+}
+
+/* Container principal */
+.container {
+  z-index: 2;
+  text-align: center;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  height: 100%;
+  margin-bottom: 25px;
+}
+
+.container h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  margin-bottom: 1rem;
+  color: white;
+  max-width: 100%;
+}
+
+.container p{
+  font-size: 14px;
+  max-width: 100%;
+}
+
+.time {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.carousel {
+  width: 70%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+/* Corações caindo */
+.hearts-background {
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  top: -2rem;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateY(0);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .popup{
+    background: rgba(0, 0, 0, 0.253);
+  }
+  .popup-content {
+    width: 85%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel{
+    margin: 15px;
+    flex-shrink: 0;
+  }
+
+  .time {
+    font-size: 1.8rem;
+  }
+
+  .spotify-container #spotify-icon{
+    right: 2px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .spotify-buttons img{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.spotify-container{
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  background-color: palevioletred;
+  border-radius: 15px;
+  position: relative;
+  max-width: 650px;
+  margin: 15px;
+}
+
+.spotify-container-title{
+  display: flex;
+  text-align: left;
+  width: 100%;
+}
+
+.spotify-container-title #album-photo{
+  border-radius: 13px;
+  margin: 5px;
+}
+.spotify-container #spotify-icon{
+  margin: 5px;
+  filter: grayscale();
+  position: absolute;
+  right: 2px;
+  
+}
+
+.spotify-container-title h3{
+  color: white; 
+}
+
+.spotify-container-title p{
+ font-size: 14px;
+ margin-left: 3px;
+}
+
+.spotify-mid{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spotify-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spotify-buttons img{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.spotify-control{
+  display: flex;
+  margin: 5px;
+}
+
+.progress-bar{
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo base do input */
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+/* Trilho da barra (track) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: rgb(255, 255, 255); /* COR DO FUNDO DA BARRA */
+  border-radius: 3px;
+}
+
+/* Bolinha (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffb4e0;
+  margin-top: -4px; /* centraliza */
+  transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ffb4e0;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: rgb(189, 189, 189);
+  border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #fcfcfc;
+  cursor: pointer;
+}
