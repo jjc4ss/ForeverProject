@@ -9,6 +9,7 @@ import pause from './assets/botao-de-pausa.png'
 import euiela1 from './assets/euiela1.jpg'
 import euiela2 from './assets/euiela2.jpg'
 import euiela3 from './assets/euiela3.jpg'
+import euiela4 from './assets/euiela4.jpg'
 import matheuskauan from './assets/matheuskauan.mp3'
 import albumcapa from './assets/matheus-kauan.webp'
 
@@ -30,7 +31,7 @@ function getTimeDifference(from) {
 }
 
 const images = [
-  euiela1,euiela3,euiela2
+  euiela1,euiela3,euiela2, euiela4
 ];
 
 export default function App() {
